@@ -8,7 +8,7 @@ public class InvertedIndexClient {
     public static void main(String[] args) {
         try {
             // Locate the registry and get the stub of the service
-            String endpoint = "rmi://127.0.0.1:8099/InvertedIndexService";
+            String endpoint = "rmi://127.0.0.1:8080/InvertedIndexService";
             InvertedIndexService service = (InvertedIndexService) Naming.lookup(endpoint);
 
             // Now you can use the service object to call remote methods
