@@ -83,7 +83,7 @@ public class InvertedIndexServiceImpl extends UnicastRemoteObject implements Inv
             // Create and start the RMI registry on port 8099
             LocateRegistry.createRegistry(8099);
             // Bind the remote object to the registry
-            Naming.rebind("//68.233.127.218:8099/InvertedIndexService", server);
+            Naming.rebind("//127.0.0.1:8099/InvertedIndexService", server);
             System.out.println("InvertedIndexService ready...");
         } catch (Exception e) {
             e.printStackTrace();

@@ -20,7 +20,7 @@ public class InvertedIndexClientTest {
  @Test
  public void testInvertedIndex() throws Exception {
      // Locate the registry and get the stub of the service
-	 String endpoint = "rmi://68.233.127.218:8099/InvertedIndexService";
+	 String endpoint = "rmi://127.0.0.1:8099/InvertedIndexService";
 
      InvertedIndexService service = (InvertedIndexService) 
      						Naming.lookup(endpoint);
@@ -29,7 +29,7 @@ public class InvertedIndexClientTest {
      String text ="sample_data.txt";
      // Invoke the service and get the inverted index
      Map<String, List<Integer>> index = service.getInvertedIndex(text);
-     System.out.println(index.get("to"));  
+     //System.out.println(index.get("to"));  
 
  }
 }
